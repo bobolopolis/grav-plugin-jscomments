@@ -1,9 +1,0 @@
-{% if ( false == page.header.comments.disabled ) %}
-  {% if ( 'disqus' == page.header.comments.provider ) %}
-    {% include 'providers/disqus.html.twig' %}
-  {% elseif ( 'intensedebate' == page.header.comments.provider ) %}
-    {% include 'providers/intensedebate.html.twig' %}
-  {% elseif ( 'facebook' == page.header.comments.provider ) %}
-
-  {% endif %}
-{% endif %}

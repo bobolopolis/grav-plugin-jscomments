@@ -1,6 +1,6 @@
-name: Comments Plugin
+name: JSComments Plugin
 version: 1.0.0
-description: Add comments in your site.
+description: Add comments in your site with Disqus / IntenseDebate / Facebook system.
 
 form:
   fields:

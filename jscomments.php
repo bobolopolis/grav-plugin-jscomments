@@ -3,7 +3,7 @@ namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
 
-class CommentsPlugin extends Plugin
+class JSCommentsPlugin extends Plugin
 {
   public static function getSubscribedEvents() {
     return [
@@ -23,7 +23,7 @@ class CommentsPlugin extends Plugin
     $page = $this->grav['page'];
 
     /* get defaults from config file */
-    $defaults = (array) $this->config->get('plugins.comments');
+    $defaults = (array) $this->config->get('plugins.jscomments');
 
     /* define valid providers */
     $providers = [
@@ -32,25 +32,23 @@ class CommentsPlugin extends Plugin
       'facebook'
     ];
 
-    //die(print_r($page->header()->comments, true));
-
     /* validate header */
-    if ( isset($page->header()->comments) ) {
+    if ( isset($page->header()->jscomments) ) {
       /* validate provider */
-      if ( isset($page->header()->comments['provider']) and in_array($page->header()->comments['provider'], $providers) ) {
+      if ( isset($page->header()->jscomments['provider']) and in_array($page->header()->jscomments['provider'], $providers) ) {
         /* save provider */
-        $provider = $page->header()->comments['provider'];
+        $provider = $page->header()->jscomments['provider'];
 
         /* merge config with header page */
-        $page->header()->comments = array_merge($defaults, $page->header()->comments);
+        $page->header()->jscomments = array_merge($defaults, $page->header()->jscomments);
         
         /* validate auto_content */
-        if ( isset($page->header()->comments['auto_content']) and $page->header()->comments['auto_content'] ) {
+        if ( isset($page->header()->jscomments['auto_content']) and $page->header()->jscomments['auto_content'] ) {
           /* save current content */
           $old_content = $page->content();
 
           /* parse disqus comments template */
-          $content = $this->grav['twig']->twig()->render('comments.html.twig', ['page' => $page]);
+          $content = $this->grav['twig']->twig()->render('jscomments.html.twig', ['page' => $page]);
 
           /* update page with new content */
           $page->content($old_content . $content);
@@ -59,7 +57,7 @@ class CommentsPlugin extends Plugin
         return; // need pass throw
       }
     } else {
-      $page->header()->comments = $defaults;
+      $page->header()->jscomments = $defaults;
     }
   }
 }
