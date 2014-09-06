@@ -1,9 +1,11 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/{{ page.header.jscomments.lang|default('en_US')|e('js') }}/sdk.js#xfbml=1&appId={{ page.header.jscomments.account|default('')|e('js') }}&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-comments" data-href="{{ page.header.jscomments.url|default(page.url(true))|e('html') }}" data-numposts="{{ page.header.jscomments.numposts|default(5)|e('html') }}" data-colorscheme="{{ page.header.jscomments.color_scheme|default('light')|e('html') }}" data-width="{{ page.header.jscomments.width|default('100%')|e('html') }}"></div>
+<div id="jscomments">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/{{ page.header.jscomments.lang|default('en_US')|e('url') }}/sdk.js#xfbml=1&appId={{ page.header.jscomments.account|default('')|e('url') }}&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div class="fb-comments" data-href="{{ page.header.jscomments.url|default(page.url(true))|e('html_attr') }}" data-numposts="{{ page.header.jscomments.numposts|default(5)|e('html_attr') }}" data-colorscheme="{{ page.header.jscomments.color_scheme|default('light')|e('html_attr') }}" data-width="{{ page.header.jscomments.width|default('100%')|e('html_attr') }}"></div>
+</div>

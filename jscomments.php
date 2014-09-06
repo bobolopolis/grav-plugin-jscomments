@@ -41,13 +41,13 @@ class JSCommentsPlugin extends Plugin
 
         /* merge config with header page */
         $page->header()->jscomments = array_merge($defaults, $page->header()->jscomments);
-        
+
         /* validate auto_content */
         if ( isset($page->header()->jscomments['auto_content']) and $page->header()->jscomments['auto_content'] ) {
           /* save current content */
           $old_content = $page->content();
 
-          /* parse disqus comments template */
+          /* parse comments template */
           $content = $this->grav['twig']->twig()->render('jscomments.html.twig', ['page' => $page]);
 
           /* update page with new content */
