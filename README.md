@@ -6,9 +6,9 @@ Enabling the plugin is very simple. Just install the plugin folder to `/user/plu
 
 # Installation
 
-To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the resulting folder to `jscomments`. 
+To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the resulting folder to `jscomments`.
 
->> It is important that the folder be named `jscomments` as this is the folder referenced in the plugin's code. 
+>> It is important that the folder be named `jscomments` as this is the folder referenced in the plugin's code.
 
 The contents of the zipped folder should now be located in the `/your/site/grav/user/plugins/jscomments` directory.
 
@@ -37,26 +37,39 @@ You have the ability to set a number of variables that affect the JSComments plu
 
 These options can exist in two places. Primarily, your user defaults will be set within the **jscomments.yaml** file in the `user/config/plugins/` directory. If you do not have a `user/config/plugins/` already, create the folder as it will enable you to change the default settings of the plugin without losing these updates in the event that the plugin is updated and/or reinstalled later on.
 
-Alterantively, you can override these defaults within the 
+Alterantively, you can override these defaults within the
 
 Here are the variables available:
 
-- jscomments:
-  - provider (disqus | intensedebate)
-  - account
-  - title
-  - developer (only for Disqus Comments)
-  - id
-  - url
-  - disabled
-  - auto_content
+**Common**
+```
+provider: (disqus|intensedebate|facebook)
+account:
+url: (default: Page URL)
+disabled: (default: false)
+auto_content: (default: true)
+```
 
-Default values:
-- title = Page title
-- id = Page ID
-- url = Page URL
-- disabled = false
-- auto_content = false
+**Disqus** plus common variables:
+```
+title: (default: Page Title)
+id: (default: Page ID)
+developer: (default: false)
+```
+
+**IntenseDebate** plus common variables:
+```
+id: (default: Page ID)
+```
+
+**Facebook** plus common variables:
+```
+id: (default: Page ID)
+lang: (default: en_US)
+numposts: (default: 5)
+color_scheme: (default: light)
+width: (default: 100%)
+```
 
 If you want to change any of these settings for a specific page you can do so via the page's header. Below is an example of how these settings can be used.
 
