@@ -1,4 +1,4 @@
 enabled: true
 
 disabled: false
-auto_content: false
+auto_content: true
