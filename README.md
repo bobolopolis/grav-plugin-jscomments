@@ -18,10 +18,7 @@ The contents of the zipped folder should now be located in the `/your/site/grav/
 
 ### Initial Setup
 
-You have 2 way to add JSComments Plugin to your page:
-
-1. Use `auto_content: true` in your configuration or page header.
-2. Place the following line of code in the theme file you wish to add jscomments for:
+Place the following line of code in the theme file you wish to add jscomments for:
 
 ```
 {% include 'jscomments.html.twig' %}
@@ -47,7 +44,6 @@ provider: (disqus|intensedebate|facebook)
 account:
 url: (default: Page URL)
 disabled: (default: false)
-auto_content: (default: true)
 ```
 
 **Disqus** plus common variables:
@@ -88,7 +84,6 @@ provider: disqus
 account: disqus_shortname_example
 developer: false
 disabled: false
-auto_content: true
 ```
 
 For most users, only the **provider** and **account** option will need to be set. This will pull the comments settings from your account and pull information (such as the page title) from the page.
