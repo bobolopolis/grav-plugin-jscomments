@@ -4,7 +4,7 @@
     var disqus_shortname  = '{{ page.header.jscomments.account|default('')|e }}'; // required: replace example with your forum shortname
     var disqus_title      = '{{ page.header.jscomments.title|default(page.title)|e }}';
     var disqus_developer  = '{{ page.header.jscomments.developer|default('false')|e }}'; // developer mode
-    var disqus_identifier = '{{ page.header.jscomments.id|default(page.id)|e }}';
+    var disqus_identifier = '{{ page.header.jscomments.id|default(page.url(true))|e }}';
     var disqus_url        = '{{ page.header.jscomments.url|default(page.url(true))|e }}';
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

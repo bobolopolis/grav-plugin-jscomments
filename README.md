@@ -1,6 +1,6 @@
 # Grav JSComments Plugin
 
-**jscomments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Disqus / IntenseDebate and Facebook comments system.
+**JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Disqus / IntenseDebate and Facebook comments system.
 
 Enabling the plugin is very simple. Just install the plugin folder to `/user/plugins/` in your Grav install. By default, the plugin is enabled, providing some default values.
 

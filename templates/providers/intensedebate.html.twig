@@ -1,7 +1,7 @@
 <div id="jscomments">
   <script>
     var idcomments_acct     = '{{ page.header.jscomments.account|default('')|e('js') }}';
-    var idcomments_post_id  = '{{ page.header.jscomments.id|default(page.id)|e('js') }}';
+    var idcomments_post_id  = '{{ page.header.jscomments.id|default(page.url(true))|e }}';
     var idcomments_post_url = '{{ page.header.jscomments.url|default(page.url(true))|e }}';
   </script>
   <span id="IDCommentsPostTitle" style="display:none"></span>
