@@ -21,7 +21,7 @@ The contents of the zipped folder should now be located in the `/your/site/grav/
 Place the following line of code in the theme file you wish to add jscomments for:
 
 ```
-{% include 'jscomments.html.twig' %}
+{% if (config.plugins.jscomments.enabled) %}{% include 'jscomments.html.twig' %}{% endif %}
 ```
 
 This code works best when placed within the content block of the page, just below the main `{{ page.content }}` tag. This will place it at the bottom of the page's content.
