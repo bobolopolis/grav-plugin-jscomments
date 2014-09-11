@@ -49,18 +49,17 @@ disabled: (default: false)
 **Disqus** plus common variables:
 ```
 title: (default: Page Title)
-id: (default: Page ID)
+id: (default: Page URL)
 developer: (default: false)
 ```
 
 **IntenseDebate** plus common variables:
 ```
-id: (default: Page ID)
+id: (default: Page URL)
 ```
 
 **Facebook** plus common variables:
 ```
-id: (default: Page ID)
 lang: (default: en_US)
 numposts: (default: 5)
 color_scheme: (default: light)
