@@ -1,6 +1,6 @@
 # Grav JSComments Plugin
 
-**JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Disqus / IntenseDebate and Facebook comments system.
+**JSComments** is a [Grav](http://github.com/getgrav/grav) plugin which allows Grav to integrate comments into individual pages from Disqus / IntenseDebate / Facebook and Muut comments system.
 
 Enabling the plugin is very simple. Just install the plugin folder to `/user/plugins/` in your Grav install. By default, the plugin is enabled, providing some default values.
 
@@ -40,8 +40,8 @@ Here are the variables available:
 
 **Common**
 ```
-provider: (disqus|intensedebate|facebook)
-account:
+provider: (disqus|intensedebate|facebook|muut)
+account: (disqus_shortname|intensedebate_acct|facebook_appid|muut_community)
 url: (default: Page URL)
 disabled: (default: false)
 ```
@@ -66,6 +66,18 @@ color_scheme: (default: light)
 width: (default: 100%)
 ```
 
+**Muut** plus common variables:
+```
+lang: (default: en)
+title: (default: Page Title)
+show_title: (default: false)
+show_online: (default: false)
+channel: (default: General)
+upload: (default: false)
+share: (default: true)
+widget: (default: false)
+```
+
 If you want to change any of these settings for a specific page you can do so via the page's header. Below is an example of how these settings can be used.
 
 ```
@@ -85,5 +97,5 @@ developer: false
 disabled: false
 ```
 
-For most users, only the **provider** and **account** option will need to be set. This will pull the comments settings from your account and pull information (such as the page title) from the page.
+For most users, only the **provider** (**account** for Disqus/IntenseDebate and Facebook) option will need to be set. This will pull the comments settings from your account and pull information (such as the page title) from the page.
 
