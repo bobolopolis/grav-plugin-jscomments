@@ -7,8 +7,8 @@ class JSCommentsPlugin extends Plugin
 {
   public static function getSubscribedEvents() {
     return [
-      'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-      'onPageInitialized'   => ['onPageInitialized', 0]
+      'onTwigTemplatePaths'   => ['onTwigTemplatePaths', 0],
+      'onPageInitialized'     => ['onPageInitialized', 0]
     ];
   }
 
@@ -29,7 +29,8 @@ class JSCommentsPlugin extends Plugin
     $providers = [
       'disqus',
       'intensedebate',
-      'facebook'
+      'facebook',
+      'muut'
     ];
 
     /* validate header */
