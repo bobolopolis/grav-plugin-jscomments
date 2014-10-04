@@ -1,6 +1,14 @@
-name: JSComments Plugin
+name: JSComments
 version: 1.0.6
-description: Add comments in your site with Disqus / IntenseDebate / Facebook / Muut Javascript system.
+description: Add comments in your site with Disqus, IntenseDebate, Facebook, and Muut comment system.
+icon: comments-o
+author:
+  name: NunoPress LLC
+  email: your_email_here
+homepage: https://github.com/nunopress/grav-plugin-jscomments
+keywords: jscomments, plugin, comments, services, disqus, intensedebate, facebook, muut
+bugs: https://github.com/nunopress/grav-plugin-jscomments/issues
+license: MIT
 
 form:
   fields:
