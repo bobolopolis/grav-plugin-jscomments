@@ -7,6 +7,7 @@ author:
   email: hello@nunopress.com
   url: http://nunopress.com
 homepage: https://github.com/nunopress/grav-plugin-jscomments
+demo: http://grav-plugin-jscomments.nunopress.com/
 keywords: jscomments, plugin, comments, services, disqus, intensedebate, facebook, muut
 bugs: https://github.com/nunopress/grav-plugin-jscomments/issues
 license: MIT
