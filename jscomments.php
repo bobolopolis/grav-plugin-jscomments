@@ -7,30 +7,18 @@ class JSCommentsPlugin extends Plugin
 {
   public static function getSubscribedEvents() {
     return [
-      'onPluginsInitialized'  => ['onPluginsInitialized', 0],
       'onTwigTemplatePaths'   => ['onTwigTemplatePaths', 0],
       'onPageInitialized'     => ['onPageInitialized', 0]
     ];
   }
 
-  public function onPluginsInitialized()
-  {
-    if ( $this->isAdmin() ) {
-      $this->active = false;
-    }
-  }
-
   public function onTwigTemplatePaths()
   {
-    if ( ! $this->active ) return;
-
     $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
   }
 
   public function onPageInitialized()
   {
-    if ( ! $this->active ) return;
-
     /* save page object */
     $page = $this->grav['page'];
 
