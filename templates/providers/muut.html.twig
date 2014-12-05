@@ -1,14 +1,14 @@
 <div id="jscomments">
   <a class="muut"
-    href="https://muut.com/i/{{ page.header.jscomments.account|default('')|e('html_attr') }}/comments{{ page.header.jscomments.url|default(page.url)|e('html_attr') }}"
-    title="{{ page.header.jscomments.title|default(page.title)|e('html_attr') }}"
-    data-channel="{{ page.header.jscomments.channel|default('General')|e('html_attr') }}"
-    data-show_online="{{ page.header.jscomments.show_online|default('false')|e('html_attr') }}"
-    data-show_title="{{ page.header.jscomments.show_title|default('false')|e('html_attr') }}"
-    data-upload="{{ page.header.jscomments.upload|default('false')|e('html_attr') }}"
-    data-share="{{ page.header.jscomments.share|default('true')|e('html_attr') }}"
-    data-widget="{{ page.header.jscomments.widget|default('false')|e('html_attr') }}">
+    href="https://muut.com/i/{{ config.plugins.jscomments.providers.muut.forum|e('html_attr') }}/comments{{ config.plugins.jscomments.providers.muut.url|default(page.url)|e('html_attr') }}"
+    title="{{ config.plugins.jscomments.providers.muut.title|default(page.title)|e('html_attr') }}"
+    data-channel="{{ config.plugins.jscomments.providers.muut.channel|e('html_attr') }}"
+    data-show_online="{{ config.plugins.jscomments.providers.muut.show_online|e('html_attr') }}"
+    data-show_title="{{ config.plugins.jscomments.providers.muut.show_title|e('html_attr') }}"
+    data-upload="{{ config.plugins.jscomments.providers.muut.upload|e('html_attr') }}"
+    data-share="{{ config.plugins.jscomments.providers.muut.share|e('html_attr') }}"
+    data-widget="{{ config.plugins.jscomments.providers.muut.widget|e('html_attr') }}">
     Comments
   </a>
-  <script src="//cdn.muut.com/1/moot.{{ page.header.jscomments.lang|default('en')|e('html_attr') }}.min.js"></script>
+  <script src="//cdn.muut.com/1/moot.{{ config.plugins.jscomments.providers.muut.lang|e('html_attr') }}.min.js"></script>
 </div>
