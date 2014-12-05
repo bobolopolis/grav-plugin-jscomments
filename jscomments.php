@@ -35,12 +35,8 @@ class JSCommentsPlugin extends Plugin
   {
     $this->mergeConfig($this->grav['page']);
 
-    /* save page object */
-    $page = $this->grav['page'];
-
     $options = $this->config->get('plugins.jscomments');
 
-    /* define valid providers */
     $providers = $options['providers'];
 
     if ( ! $this->validateProvider($options['provider']) ) {
