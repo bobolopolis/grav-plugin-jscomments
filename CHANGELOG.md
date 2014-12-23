@@ -1,5 +1,5 @@
 # v1.1.1
-## 23 Dec 2014
+## 12/23/2014
 
 1. [](#bugfix)
   * Update the merge config with php function array_replace_recursive instead merge_array.
@@ -9,14 +9,14 @@
 
 
 # v1.1.0
-## 6 Dec 2014
+## 12/06/2014
 
 1. [](#bugfix)
   * Correct version number
 
 
 # v1.0.9
-## 5 Dec 2014
+## 12/05/2014
 
 1. [](#improved)
   * Remove $page variable, not need.
@@ -28,7 +28,7 @@
 
 
 # v1.0.8
-## 1 Nov 2014
+## 11/01/2014
 
 1. [](#new)
   * Added Admin Plugin check.
@@ -36,4 +36,4 @@
 
 
 # v1.0.7
-## 24 Oct 2014
+## 10/24/2014
