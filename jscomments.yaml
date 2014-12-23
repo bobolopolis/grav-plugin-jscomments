@@ -1,6 +1,6 @@
 enabled: true
 
-provider: "disqus"
+provider: ""
 
 providers:
   disqus:
