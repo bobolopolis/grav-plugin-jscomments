@@ -57,7 +57,7 @@ provider: "disqus" # (disqus | intensedebate | facebook | muut)
 
 providers:
   disqus:
-    shotname: ""
+    shortname: ""
     developer: false
 
   intensedebate:
