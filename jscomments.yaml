@@ -4,8 +4,7 @@ provider: ""
 
 providers:
   disqus:
-    shotname: ""
-    developer: false
+    shortname: ""
 
   intensedebate:
     acct: ""

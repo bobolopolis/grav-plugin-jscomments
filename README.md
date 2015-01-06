@@ -24,16 +24,16 @@ You should now have all the plugin files under
 
     /your/site/grav/user/plugins/jscomments
 
->> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
+> **NOTE:** This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
 
 # Usage
 
 ### Initial Setup
 
-Place the following line of code in the theme file you wish to add jscomments for:
+Place the following line of code in the theme file or page (__you need enabled Twig process in the config before using Twig functions on page__) you wish to add jscomments for:
 
 ```
-{% if (config.plugins.jscomments.enabled) %}{% include 'jscomments.html.twig' %}{% endif %}
+{{ jscomments('provider_name', {'shortname': 'shortname_example'})}}
 ```
 
 This code works best when placed within the content block of the page, just below the main `{{ page.content }}` tag. This will place it at the bottom of the page's content.
@@ -57,8 +57,7 @@ provider: "disqus" # (disqus | intensedebate | facebook | muut)
 
 providers:
   disqus:
-    shotname: ""
-    developer: false
+    shortname: ""
 
   intensedebate:
     acct: ""
@@ -100,14 +99,12 @@ provider: disqus
 providers:
   disqus:
     shortname: "disqus_shortname_example"
-    developer: false
 ```
 
 If you want disable the comments in one page you can setup the page headers with this example:
 
 ```
-jscomments:
-  enabled: false
+jscomments: false
 ```
 
 For most users, only the **provider** option will need to be set, in the providers setting you need to setup where you found "" string because this key is required for working the provider. This will pull the comments settings from your account and pull information (such as the page title) from the page.
