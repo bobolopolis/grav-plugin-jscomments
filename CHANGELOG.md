@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 # v1.2.0
 ## 01/01/2015
 
 1. [](#new)
   * Rewrite how to add jscomments to page/template. Now working with Twig function. Check the [README.md](README.md) for update.
 
+=======
+>>>>>>> origin/develop
 # v1.1.2
 ## 12/31/2014
 
 1. [](#bugfix)
+<<<<<<< HEAD
   * Fix config typo.
+=======
+ * Fix config typo.
+>>>>>>> origin/develop
 
 # v1.1.1
 ## 12/23/2014

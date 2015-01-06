@@ -5,6 +5,10 @@ provider: ""
 providers:
   disqus:
     shortname: ""
+<<<<<<< HEAD
+=======
+    developer: false
+>>>>>>> origin/develop
 
   intensedebate:
     acct: ""

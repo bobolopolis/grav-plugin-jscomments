@@ -58,6 +58,10 @@ provider: "disqus" # (disqus | intensedebate | facebook | muut)
 providers:
   disqus:
     shortname: ""
+<<<<<<< HEAD
+=======
+    developer: false
+>>>>>>> origin/develop
 
   intensedebate:
     acct: ""

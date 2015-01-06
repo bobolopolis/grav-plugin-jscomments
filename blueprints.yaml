@@ -1,5 +1,9 @@
 name: JSComments
+<<<<<<< HEAD
 version: 1.2.0
+=======
+version: 1.1.2
+>>>>>>> origin/develop
 description: "Add comments in your site with Disqus, IntenseDebate, Facebook, and Muut comment system."
 icon: comments-o
 author:
