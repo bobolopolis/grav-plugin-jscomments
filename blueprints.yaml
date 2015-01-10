@@ -1,5 +1,5 @@
 name: JSComments
-version: 1.2.0
+version: 1.2.1
 description: "Add comments in your site with Disqus, IntenseDebate, Facebook, and Muut comment system."
 icon: comments-o
 author:
@@ -13,14 +13,116 @@ bugs: https://github.com/nunopress/grav-plugin-jscomments/issues
 license: MIT
 
 form:
+  validation: strict
   fields:
     enabled:
       type: toggle
       label: Plugin status
       highlight: 1
-      default: 0
+      default: 1
       options:
         1: Enabled
         0: Disabled
       validate:
         type: bool
+
+    provider:
+      type: select
+      label: Default provider
+      options:
+        disqus: "Disqus"
+        intensedebate: "IntenseDebate"
+        facebook: "Facebook"
+        muut: "Muut"
+
+    providers:
+      type: section
+      title: Providers
+      text: Providers Settings
+      fields:
+        disqus:
+          type: section
+          title: "Disqus"
+          fields:
+            providers.disqus.shortname:
+              type: text
+              label: "Shortname"
+        intensedebate:
+          type: section
+          title: "IntenseDebate"
+          fields:
+            providers.intensedebate.acct:
+              type: text
+              label: "ACCT"
+        facebook:
+          type: section
+          title: "Facebook"
+          fields:
+            providers.facebook.appId:
+              type: text
+              label: appId
+            providers.facebook.lang:
+              type: text
+              label: Lang
+            providers.facebook.numposts:
+              type: text
+              label: Number of posts
+              validate:
+                type: int
+            providers.facebook.colorscheme:
+              type: select
+              label: Color scheme
+              options:
+                light: Light
+                dark: Dark
+            providers.facebook.width:
+              type: text
+              label: Width
+        muut:
+          type: section
+          title: Muut
+          fields:
+            providers.muut.forum:
+              type: text
+              label: Forum name
+            providers.muut.channel:
+              type: text
+              label: Channel
+            providers.muut.show_online:
+              type: toggle
+              label: Show online
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            providers.muut.show_title:
+              type: toggle
+              label: Show title
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            providers.muut.upload:
+              type: toggle
+              label: Upload
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            providers.muut.share:
+              type: toggle
+              label: Share
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            providers.muut.widget:
+              type: toggle
+              label: Widget
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+            providers.muut.lang:
+              type: text
+              label: Language
