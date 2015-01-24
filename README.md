@@ -46,12 +46,12 @@ You have the ability to set a number of variables that affect the JSComments plu
 
 These options can exist in two places. Primarily, your user defaults will be set within the **jscomments.yaml** file in the `user/config/plugins/` directory. If you do not have a `user/config/plugins/` already, create the folder as it will enable you to change the default settings of the plugin without losing these updates in the event that the plugin is updated and/or reinstalled later on.
 
-Alterantively, you can override these defaults within the
+Alternatively, you can override these defaults within the
 
 Here are the variables available:
 
 ```
-enable: true # Enable / Disable the plugin
+enabled: true # Enable / Disable the plugin
 
 provider: "disqus" # (disqus | intensedebate | facebook | muut)
 
